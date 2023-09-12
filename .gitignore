@@ -28,6 +28,9 @@ yarn-error.*
 .DS_Store
 *.pem
 
+# remove this fro production puposes
+.env
+
 # local env files
 .env*.local
 
