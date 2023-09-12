@@ -59,7 +59,7 @@ function RootLayoutNav() {
   }, []);
 
   return (
-    <View style={{ flex: 1, backgroundColor: "blue" }}>
+    <View style={{ flex: 1 }}>
       {session && session.user ? (
         <Home key={session.user.id} session={session} />
       ) : (
