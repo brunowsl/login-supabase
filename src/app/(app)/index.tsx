@@ -1,18 +1,10 @@
 import { Session } from "@supabase/supabase-js";
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
 import { supabase } from "../../supabase/client";
 
 export default function Home({ session }: { session: Session }) {
   return (
-    <View
-      style={{
-        flex: 1,
-        backgroundColor: "red",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: 16,
-      }}
-    >
+    <View style={styles.container}>
       <Text style={{ fontSize: 24 }}>Home</Text>
       <Text style={{ fontSize: 18, fontWeight: "bold" }}>
         {session.user.email}
@@ -21,3 +13,13 @@ export default function Home({ session }: { session: Session }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 16,
+    backgroundColor: "#f8f8f8",
+  },
+});
